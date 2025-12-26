@@ -210,7 +210,7 @@ export function Skills() {
   const [hoveredSkill, setHoveredSkill] = useState<Skill | null>(null);
 
   return (
-    <section id="skills" className="relative py-14 md:py-20">
+    <section id="skills" className="relative py-10 md:py-16">
       {/* Header */}
       <div className="text-center mb-16 px-4">
         <h2 className="text-4xl md:text-6xl font-bold tracking-tight">

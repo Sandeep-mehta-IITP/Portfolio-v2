@@ -142,7 +142,7 @@ export function Projects() {
   const isInView = useInView(sectionRef, { threshold: 0.1 });
 
   return (
-    <section id="projects" ref={sectionRef} className="py-14 md:py-20 bg-secondary/30">
+    <section id="projects" ref={sectionRef} className="py-10 md:py-16 bg-secondary/30">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div

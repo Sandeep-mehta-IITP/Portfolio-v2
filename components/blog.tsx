@@ -49,7 +49,7 @@ export function Blog() {
   const isInView = useInView(sectionRef, { threshold: 0.1 });
 
   return (
-    <section id="blog" ref={sectionRef} className="py-12 md:py-20">
+    <section id="blog" ref={sectionRef} className="py-10 md:py-16">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div

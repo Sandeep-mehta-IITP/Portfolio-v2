@@ -37,7 +37,7 @@ export function HowIThink() {
   const isInView = useInView(sectionRef, { threshold: 0.1 });
 
   return (
-    <section ref={sectionRef} className="py-2 md:py-3 bg-secondary/30">
+    <section ref={sectionRef} className="bg-secondary/30">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div

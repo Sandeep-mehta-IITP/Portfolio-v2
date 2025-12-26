@@ -165,7 +165,7 @@ export function Footer() {
             </p>
 
             <div className="flex items-center gap-6">
-              <p className="text-sm text-muted-foreground">IIT Patna, India</p>
+              <p className="text-sm text-primary md:text-muted-foreground">IIT Patna, India</p>
               <button
                 onClick={scrollToTop}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
