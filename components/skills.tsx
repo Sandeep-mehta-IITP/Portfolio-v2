@@ -23,213 +23,218 @@ type Category = "Core" | "Backend" | "Tools";
 
 interface Skill {
   name: string;
-  description: string;
-  level: "Beginner" | "Intermediate" | "Advanced" | "Expert";
+  short: string;
+  detail: string;
   category: Category;
   icon: React.ElementType;
 }
 
 const skills: Skill[] = [
-  // Core
+  // CORE
   {
     name: "HTML",
-    description: "Semantic markup for accessible web structures.",
-    level: "Expert",
+    short: "Semantic markup",
+    detail:
+      "Accessible, SEO-friendly semantic HTML for scalable and maintainable web structures.",
     category: "Core",
     icon: Code2,
   },
   {
     name: "CSS",
-    description: "Advanced styling with Flexbox, Grid, and animations.",
-    level: "Advanced",
+    short: "Modern layouts & animations",
+    detail:
+      "Advanced styling using Flexbox, Grid, responsive design principles, and smooth UI animations.",
     category: "Core",
     icon: Paintbrush,
   },
   {
     name: "JavaScript",
-    description: "ES6+, async patterns, and DOM manipulation.",
-    level: "Advanced",
+    short: "Modern ES6+",
+    detail:
+      "Asynchronous patterns, closures, event handling, and DOM manipulation for real-world apps.",
     category: "Core",
     icon: Braces,
   },
   {
     name: "TypeScript",
-    description: "Type-safe JavaScript for scalable apps.",
-    level: "Advanced",
+    short: "Type-safe architecture",
+    detail:
+      "Strong typing for scalable codebases, predictable APIs, and reduced runtime bugs.",
     category: "Core",
     icon: Braces,
   },
   {
     name: "React",
-    description: "Component-based UI with hooks and state.",
-    level: "Expert",
+    short: "Component-driven UI",
+    detail:
+      "Hooks, composition patterns, reusable components, and performance-focused UI architecture.",
     category: "Core",
     icon: Layers,
   },
   {
     name: "Next.js",
-    description: "SSR & API routes framework.",
-    level: "Advanced",
+    short: "Production React framework",
+    detail:
+      "SEO-first applications using App Router, Server Components, API routes, and caching strategies.",
     category: "Core",
     icon: Cpu,
   },
   {
     name: "Python",
-    description: "Scripting, automation & tooling.",
-    level: "Intermediate",
+    short: "Automation & scripting",
+    detail:
+      "Scripting, automation, tooling, and backend utilities for productivity and data handling.",
     category: "Core",
     icon: Terminal,
   },
 
-  // Backend
+  // BACKEND
   {
     name: "Node.js",
-    description: "Server-side JavaScript runtime.",
-    level: "Advanced",
+    short: "Backend runtime",
+    detail:
+      "REST APIs, authentication systems, background jobs, and scalable server-side logic.",
     category: "Backend",
     icon: Server,
   },
   {
     name: "Express.js",
-    description: "Minimal and flexible backend framework.",
-    level: "Advanced",
+    short: "Minimal backend framework",
+    detail:
+      "Clean API architecture, middleware patterns, validation, and authentication flows.",
     category: "Backend",
     icon: Server,
   },
   {
     name: "MongoDB",
-    description: "NoSQL database & schema design.",
-    level: "Advanced",
+    short: "NoSQL databases",
+    detail:
+      "Schema design, indexing, aggregation pipelines, and performance optimization.",
     category: "Backend",
     icon: Database,
   },
   {
     name: "PostgreSQL",
-    description: "Relational SQL database systems.",
-    level: "Intermediate",
+    short: "Relational databases",
+    detail:
+      "Structured data modeling, joins, transactions, and SQL-based analytics.",
     category: "Backend",
     icon: Database,
   },
   {
     name: "Prisma ORM",
-    description: "Type-safe database ORM.",
-    level: "Advanced",
+    short: "Type-safe database access",
+    detail:
+      "Schema-driven ORM with migrations, relations, and type-safe queries.",
     category: "Backend",
     icon: Database,
   },
   {
     name: "Docker",
-    description: "Containerization & deployment workflows.",
-    level: "Intermediate",
+    short: "Containerized deployments",
+    detail:
+      "Consistent environments, container-based deployments, and CI/CD-friendly workflows.",
     category: "Backend",
     icon: Cloud,
   },
 
-  // Tools
+  // TOOLS
   {
     name: "Tailwind CSS",
-    description: "Utility-first CSS framework.",
-    level: "Advanced",
+    short: "Utility-first styling",
+    detail:
+      "Rapid UI development with consistent design systems and responsive layouts.",
     category: "Tools",
     icon: Paintbrush,
   },
   {
-    name: "Git / GitHub",
-    description: "Version control & collaboration.",
-    level: "Advanced",
+    name: "Git & GitHub",
+    short: "Version control",
+    detail:
+      "Branching strategies, clean commits, pull requests, and collaborative workflows.",
     category: "Tools",
     icon: GitBranch,
   },
   {
     name: "VS Code",
-    description: "Highly customizable code editor.",
-    level: "Advanced",
+    short: "Development environment",
+    detail:
+      "Highly customized editor with extensions for productivity and debugging.",
     category: "Tools",
     icon: Terminal,
   },
   {
     name: "Canva",
-    description: "Design & prototyping tool.",
-    level: "Intermediate",
+    short: "Design & visuals",
+    detail:
+      "Quick design assets, UI mockups, and visual content for products and presentations.",
     category: "Tools",
     icon: Paintbrush,
   },
   {
-    name: "Stripe",
-    description: "Payment gateway integrations.",
-    level: "Advanced",
-    category: "Tools",
-    icon: CreditCard,
-  },
-  {
-    name: "Razorpay",
-    description: "Indian payment gateway solutions.",
-    level: "Advanced",
+    name: "Stripe & Razorpay",
+    short: "Payment integrations",
+    detail:
+      "Secure payment integrations including cards, UPI, subscriptions, webhooks, and real-world checkout workflows for global and Indian markets.",
     category: "Tools",
     icon: CreditCard,
   },
   {
     name: "Brevo SMTP",
-    description: "Transactional email service.",
-    level: "Advanced",
+    short: "Transactional emails",
+    detail:
+      "Email delivery for authentication, notifications, and transactional workflows.",
     category: "Tools",
     icon: Mail,
   },
   {
-    name: "Data Analytics",
-    description: "Data analysis & visualization.",
-    level: "Intermediate",
-    category: "Tools",
-    icon: BarChart3,
-  },
-  {
     name: "Redux",
-    description: "Predictable state management.",
-    level: "Advanced",
+    short: "State management",
+    detail:
+      "Predictable global state, scalable architecture, and complex UI state handling.",
     category: "Tools",
     icon: Layers,
   },
+  {
+    name: "Data Analytics",
+    short: "Insights & visualization",
+    detail:
+      "Data analysis, visualization, and deriving insights for decision-making.",
+    category: "Tools",
+    icon: BarChart3,
+  },
 ];
-
-const levelGlow = {
-  Beginner: "from-zinc-400 to-zinc-500",
-  Intermediate: "from-sky-400 to-cyan-500",
-  Advanced: "from-indigo-400 to-violet-500",
-  Expert: "from-emerald-400 to-lime-500",
-};
 
 export function Skills() {
   const [activeCategory, setActiveCategory] = useState<Category>("Core");
-  const [activeSkill, setActiveSkill] = useState<Skill | null>(null);
+  const [hoveredSkill, setHoveredSkill] = useState<Skill | null>(null);
 
   return (
-    <section id="skills" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-background via-background to-muted/40 blur-3xl" />
-
+    <section id="skills" className="relative py-14 md:py-20">
       {/* Header */}
-      <div className="text-center mb-20 px-4">
+      <div className="text-center mb-16 px-4">
         <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-          Skills & Technical Expertise
+          Skills & Expertise
         </h2>
-        <p className="mt-5 text-primary max-w-xl mx-auto">
+        <p className="mt-4 max-w-xl mx-auto text-primary">
           A production-focused skill set built to design, develop, and scale
           real-world web applications — from idea to deployment.
         </p>
       </div>
 
       {/* Categories */}
-      <div className="flex justify-center gap-3 mb-16">
+      <div className="flex justify-center gap-3 mb-12">
         {(["Core", "Backend", "Tools"] as Category[]).map((cat) => (
           <button
             key={cat}
             onClick={() => {
               setActiveCategory(cat);
-              setActiveSkill(null);
+              setHoveredSkill(null);
             }}
             className={cn(
-              "px-6 py-2 rounded-full text-sm font-medium transition-all",
+              "px-5 py-2 rounded-full text-sm font-medium transition",
               activeCategory === cat
-                ? "bg-primary text-primary-foreground shadow-md"
+                ? "bg-primary text-primary-foreground"
                 : "bg-muted text-muted-foreground hover:bg-muted/70"
             )}
           >
@@ -238,68 +243,50 @@ export function Skills() {
         ))}
       </div>
 
-      {/* Skill Grid */}
-      <div className="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Grid */}
+      <div className="relative max-w-5xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills
           .filter((s) => s.category === activeCategory)
           .map((skill) => {
             const Icon = skill.icon;
             return (
-              <motion.div
+              <div
                 key={skill.name}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.25 }}
-                onHoverStart={() => setActiveSkill(skill)}
-                className="relative cursor-pointer p-6 rounded-2xl bg-card/70 backdrop-blur border border-border transition
-                hover:border-primary/40 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
+                onMouseEnter={() => setHoveredSkill(skill)}
+                onMouseLeave={() => setHoveredSkill(null)}
+                className="relative group"
               >
-                <div className="mb-4 w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Icon className="h-5 w-5 text-primary" />
+                <div className="p-4 rounded-xl bg-card border border-border flex items-center gap-3 hover:border-primary/40 transition">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Icon className="h-4 w-4 text-primary" />
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold">{skill.name}</h4>
+                    <p className="text-xs text-muted-foreground">
+                      {skill.short}
+                    </p>
+                  </div>
                 </div>
 
-                <h4 className="font-semibold mb-2">{skill.name}</h4>
-                <p className="text-sm text-muted-foreground">
-                  {skill.description}
-                </p>
-              </motion.div>
+                {/* Hover Popup */}
+                <AnimatePresence>
+                  {hoveredSkill?.name === skill.name && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute z-20 left-0 right-0 top-full mt-2 p-4 rounded-xl bg-popover border border-border shadow-lg text-sm"
+                    >
+                      {skill.detail}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             );
           })}
       </div>
-
-      {/* Active Skill Card */}
-      <AnimatePresence>
-        {activeSkill && (
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 24 }}
-            transition={{ duration: 0.3 }}
-            className="mt-20 mx-auto max-w-xl rounded-2xl bg-card border border-border p-8 text-center backdrop-blur transition
-                hover:border-primary/40 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
-          >
-            <div className="mx-auto mb-4 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-              <activeSkill.icon className="h-7 w-7 text-primary" />
-            </div>
-
-            <h3 className="text-2xl font-semibold mb-2">{activeSkill.name}</h3>
-            <p className="text-muted-foreground mb-4">
-              {activeSkill.description}
-            </p>
-
-            <span
-              className={cn(
-                "inline-block px-4 py-1.5 text-sm rounded-full text-white bg-gradient-to-r",
-                levelGlow[activeSkill.level]
-              )}
-            >
-              {activeSkill.level}
-            </span>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }

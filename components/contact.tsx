@@ -115,7 +115,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" ref={sectionRef} className="py-24 md:py-32">
+    <section id="contact" ref={sectionRef} className="py-14 md:py-20">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div

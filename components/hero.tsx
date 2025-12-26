@@ -66,9 +66,15 @@ export function Hero() {
             <ArrowRight className="ml-2 h-4 w-4" />
           </MagneticButton>
 
-          <MagneticButton href="/resume.pdf" variant="secondary">
+          {/* Download Resume */}
+          <MagneticButton
+            href="/resume/Sandeep_mehta_mern_developer_resume.pdf"
+            download
+            variant="secondary"
+            className="w-full sm:w-auto"
+          >
             <Download className="mr-2 h-4 w-4" />
-            <span>Download Resume</span>
+            Download Resume
           </MagneticButton>
         </div>
       </div>

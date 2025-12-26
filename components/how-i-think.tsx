@@ -37,16 +37,16 @@ export function HowIThink() {
   const isInView = useInView(sectionRef, { threshold: 0.1 });
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 bg-secondary/30">
+    <section ref={sectionRef} className="py-2 md:py-3 bg-secondary/30">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div
           className={cn(
-            "max-w-3xl mx-auto mb-20 text-center transition-all duration-700",
+            "max-w-3xl mx-auto mb-10 text-center transition-all duration-700",
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-2.5">
             How I think when I build.
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
@@ -58,7 +58,7 @@ export function HowIThink() {
         </div>
 
         {/* Principles grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
           {principles.map((principle, index) => (
             <div
               key={principle.title}
@@ -97,7 +97,7 @@ export function HowIThink() {
         {/* Closing line */}
         <p
           className={cn(
-            "mt-20 text-center text-muted-foreground italic transition-all duration-700",
+            "mt-8 text-center text-muted-foreground italic transition-all duration-700",
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           )}
         >

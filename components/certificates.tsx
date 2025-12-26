@@ -270,7 +270,7 @@ export function Certificates() {
     <section
       ref={sectionRef}
       id="certificates"
-      className="py-28 bg-secondary/30"
+      className="py-16 md:py-20 bg-secondary/30"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}

@@ -1,14 +1,43 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Github, Linkedin, Twitter, Heart, ArrowUpRight, Code2, Coffee, Instagram } from "lucide-react"
+import Link from "next/link";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Heart,
+  ArrowUpRight,
+  Code2,
+  Coffee,
+  Instagram,
+} from "lucide-react";
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/Sandeep-mehta-IITP", icon: Github, username: "Sandeep-mehta-IITP" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/sandeep-mehta-90a1212b7", icon: Linkedin, username: "Sandeep Mehta" },
-  { name: "Twitter", href: "https://x.com/Shivskm2023", icon: Twitter, username: "@Shivskm2023" },
-  { name: "Instagram", href: "https://www.instagram.com/sandeep._mehta", icon: Instagram, username: "sandeep._mehta" },
-]
+  {
+    name: "GitHub",
+    href: "https://github.com/Sandeep-mehta-IITP",
+    icon: Github,
+    username: "Sandeep-mehta-IITP",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/sandeep-mehta-90a1212b7",
+    icon: Linkedin,
+    username: "Sandeep Mehta",
+  },
+  {
+    name: "Twitter",
+    href: "https://x.com/Shivskm2023",
+    icon: Twitter,
+    username: "@Shivskm2023",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/sandeep._mehta",
+    icon: Instagram,
+    username: "sandeep._mehta",
+  },
+];
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -18,26 +47,35 @@ const navLinks = [
   { name: "Certificates", href: "#certificates" },
   { name: "Blog", href: "#blog" },
   { name: "Contact", href: "#contact" },
-]
+];
 
-const techStack = ["Next.js", "React", "TypeScript", "Node.js", "EXpress", "Tailwind CSS", "MongdoDB"]
+const techStack = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Node.js",
+  "EXpress",
+  "Tailwind CSS",
+  "MongdoDB",
+];
 
 export function Footer() {
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <footer className="relative bg-secondary/50 border-t border-border">
       {/* Footer Main */}
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-
           {/* Brand / About */}
           <div className="lg:col-span-1">
             <Link href="#home" className="inline-block text-2xl font-bold mb-4">
               <span className="gradient-text">Sandeep Mehta</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Senior Full-Stack Engineer building scalable, maintainable, and high-performance web products. Open to freelance projects, internships, and full-time roles.
+              Senior Full-Stack Engineer building scalable, maintainable, and
+              high-performance web products. Open to freelance projects,
+              internships, and full-time roles.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <div className="relative flex h-2 w-2">
@@ -89,7 +127,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Connect with Me</h3>
             <div className="space-y-3">
               {socialLinks.map((social) => {
-                const Icon = social.icon
+                const Icon = social.icon;
                 return (
                   <a
                     key={social.name}
@@ -103,11 +141,10 @@ export function Footer() {
                     </div>
                     <span>{social.username}</span>
                   </a>
-                )
+                );
               })}
             </div>
           </div>
-
         </div>
       </div>
 
@@ -115,12 +152,16 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="max-w-6xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <p className="text-sm text-muted-foreground flex items-center gap-1.5">
-              © {new Date().getFullYear()} Sandeep Mehta. Made with
-              <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500" />
-              &amp;
-              <Coffee className="h-3.5 w-3.5 text-amber-600" />
-              Code & Passion
+            <p className="text-sm text-muted-foreground flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2 text-center sm:text-left">
+              <span>© {new Date().getFullYear()} Sandeep Mehta</span>
+
+              <span className="flex items-center justify-center gap-1.5">
+                Made with
+                <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500" />
+                &
+                <Coffee className="h-3.5 w-3.5 text-amber-600" />
+                <span className="ml-1">Code & Passion</span>
+              </span>
             </p>
 
             <div className="flex items-center gap-6">
@@ -137,5 +178,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

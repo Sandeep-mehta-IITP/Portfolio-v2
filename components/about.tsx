@@ -10,44 +10,16 @@ export function About() {
   const isInView = useInView(sectionRef, { threshold: 0.1 });
 
   return (
-    <section id="about" ref={sectionRef} className="py-24 md:py-32">
+    <section id="about" ref={sectionRef} className="py-14 md:py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Photo */}
-          <div
-            className={cn(
-              "relative transition-all duration-700 group",
-              isInView
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-8"
-            )}
-          >
-            {/* Main Image Container */}
-            <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500">
-              <Image
-                src="https://res.cloudinary.com/sandeepmehta/image/upload/v1766505110/git_itdohf.jpg"
-                alt="Shiv - Full-Stack Developer"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                priority
-              />
-
-              {/* Gradient overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent pointer-events-none" />
-
-              {/* Subtle vignette for cinematic feel */}
-              <div className="absolute inset-0 bg-black/10 rounded-3xl pointer-events-none" />
-            </div>
-          </div>
-
-          {/* Content */}
+        <div className="grid items-center">
           <div
             className={cn(
               "transition-all duration-700 delay-200",
               isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             )}
           >
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl text-center font-bold tracking-tight mb-6">
               About Me
             </h2>
 
