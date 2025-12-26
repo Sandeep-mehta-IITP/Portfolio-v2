@@ -13,23 +13,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sandeep Mehta | Full-Stack Developer",
+  title:
+    "Sandeep Mehta — Full-Stack (MERN) Developer | React, Next.js, Node.js",
   description:
-    "Full-stack developer with a product mindset, focused on clean architecture, performance, and long-term maintainability.",
+    "Sandeep Mehta is a Full-Stack (MERN) Developer specializing in React, Next.js, Node.js, and scalable backend systems. Builds high-performance, SEO-friendly, production-ready web applications with a strong product mindset.",
+
   keywords: [
-    "Full-Stack Developer",
-    "React",
-    "Next.js",
-    "TypeScript",
+    "Full Stack Developer",
+    "MERN Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "JavaScript Developer",
+    "TypeScript Developer",
+    "Node.js Developer",
+    "Web Developer Portfolio",
+    "Software Engineer",
     "Product Engineer",
+    "Freelance Full Stack Developer",
+    "Hire MERN Developer",
+    "Full Stack Developer India",
   ],
-  authors: [{ name: "Shiv" }],
+
+  authors: [{ name: "Sandeep Mehta" }],
+  creator: "Sandeep Mehta",
+  publisher: "Sandeep Mehta",
+
   openGraph: {
-    title: "Shiv | Full-Stack Developer",
-    description: "I architect scalable web products — not just interfaces.",
+    title:
+      "Sandeep Mehta — Full-Stack (MERN) Developer | Production-Ready Web Apps",
+    description:
+      "Full-Stack Developer building scalable, high-performance web products using React, Next.js, Node.js, and modern backend architectures.",
+    url: "https://your-domain.com",
+    siteName: "Sandeep Mehta Portfolio",
     type: "website",
+    locale: "en_IN",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
+
 
 export default function RootLayout({
   children,

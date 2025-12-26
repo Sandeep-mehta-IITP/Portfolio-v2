@@ -4,6 +4,39 @@ import { useRef } from "react";
 import Image from "next/image";
 import { useInView } from "@/hooks/use-in-view";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Sandeep Mehta | Full-Stack Software Engineer & MERN Developer",
+  description:
+    "Learn about Sandeep Mehta, a Full-Stack Software Engineer and MERN Developer from IIT Patna. Focused on building scalable, production-ready web applications with strong architecture, performance, and maintainability.",
+
+  keywords: [
+    "About Full Stack Developer",
+    "About MERN Developer",
+    "Software Engineer Portfolio",
+    "Full Stack Developer IIT Patna",
+    "React Next.js Developer Background",
+    "Backend Frontend Developer",
+    "Product Focused Software Engineer",
+  ],
+
+  authors: [{ name: "Sandeep Mehta" }],
+  creator: "Sandeep Mehta",
+
+  openGraph: {
+    title: "About Sandeep Mehta | Full-Stack Software Engineer",
+    description:
+      "Full-Stack Software Engineer from IIT Patna with experience in designing and building scalable, production-grade web systems.",
+    type: "profile",
+    locale: "en_IN",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export function About() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -22,6 +55,11 @@ export function About() {
             <h2 className="text-3xl md:text-4xl text-center font-bold tracking-tight mb-6">
               About Me
             </h2>
+
+            <p className="sr-only">
+              Full-Stack Software Engineer and MERN Developer from IIT Patna,
+              specializing in scalable, production-ready web applications.
+            </p>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p className="text-lg text-foreground font-medium">
