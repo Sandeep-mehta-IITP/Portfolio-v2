@@ -49,14 +49,14 @@ export function Hero() {
         {/* Main headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-balance">
           I build scalable, high-impact web products{" "}
-          <span className="gradient-text">that solve real problems.</span>
+          <span className="gradient-text">that solve real problems</span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
           Full-stack developer focused on building clean, scalable, and
           performant systems — from thoughtful UI to robust backend
-          architecture.
+          architecture
         </p>
 
         {/* CTA Buttons */}
