@@ -5,41 +5,6 @@ import { useInView } from "@/hooks/use-in-view";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title:
-    "Engineering Blog by Sandeep Mehta | Full-Stack, MERN, Backend & AI Insights",
-  description:
-    "Technical blog by Sandeep Mehta, a Full-Stack Software Engineer from IIT Patna. Read deep dives on MERN stack, backend authentication, MongoDB, system design, and AI-driven development.",
-
-  keywords: [
-    "Full Stack Developer Blog",
-    "MERN Stack Blog",
-    "Backend Development Blog",
-    "MongoDB Aggregation Guide",
-    "Authentication Access Refresh Tokens",
-    "AI and Software Engineering",
-    "Engineering Blog India",
-    "Software Engineer Writing",
-  ],
-
-  authors: [{ name: "Sandeep Mehta" }],
-  creator: "Sandeep Mehta",
-
-  openGraph: {
-    title: "Engineering Blog | Full-Stack, Backend & AI by Sandeep Mehta",
-    description:
-      "Thoughtful writing on full-stack engineering, backend systems, authentication, MongoDB, and AI — written by a production-focused software engineer.",
-    type: "website",
-    locale: "en_IN",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 const posts = [
   {
@@ -105,6 +70,7 @@ export default function BlogPage() {
   return (
     <section id="blog" ref={sectionRef} className="py-28">
       <div className="max-w-6xl mx-auto px-6">
+
         {/* Back to Home */}
         <Link
           href="/#home"
@@ -118,12 +84,6 @@ export default function BlogPage() {
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-16">
           Writing & Technical Articles
         </h2>
-
-        <p className="sr-only">
-          Engineering blog by a Full-Stack Software Engineer from IIT Patna
-          covering MERN stack, backend authentication, MongoDB aggregation, AI
-          in software development, and scalable system design.
-        </p>
 
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 gap-6">
@@ -140,11 +100,7 @@ export default function BlogPage() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Cover Image */}
-              <Link
-                href={post.slug}
-                target="_blank"
-                className="block overflow-hidden"
-              >
+              <Link href={post.slug} target="_blank" className="block overflow-hidden">
                 <img
                   src={post.coverImg}
                   alt={post.title}
@@ -163,9 +119,7 @@ export default function BlogPage() {
                       className="w-8 h-8 rounded-full object-cover"
                     />
                     <div className="text-sm text-muted-foreground">
-                      <p className="font-medium text-foreground">
-                        {post.author}
-                      </p>
+                      <p className="font-medium text-foreground">{post.author}</p>
                       <p className="opacity-75">
                         {post.date} · {post.readTime}
                       </p>

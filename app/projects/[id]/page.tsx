@@ -11,40 +11,7 @@ import {
   Users,
   Code2,
 } from "lucide-react";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title:
-    "Full-Stack Projects by Sandeep Mehta | MERN, Backend, AI Case Studies",
-  description:
-    "Explore production-ready full-stack projects by Sandeep Mehta, a software engineer from IIT Patna. Real-world MERN, backend, AI, SaaS, and scalable system case studies with clean architecture and performance focus.",
-
-  keywords: [
-    "Full Stack Developer Projects",
-    "MERN Stack Projects",
-    "Backend Engineering Case Studies",
-    "React Node MongoDB Projects",
-    "AI SaaS Projects",
-    "Production Ready Web Applications",
-    "Software Engineer Portfolio India",
-  ],
-
-  authors: [{ name: "Sandeep Mehta" }],
-  creator: "Sandeep Mehta",
-
-  openGraph: {
-    title: "Full-Stack Engineering Projects | MERN, Backend & AI",
-    description:
-      "Case studies of real-world full-stack applications built with MERN, backend systems, payments, AI integrations, and scalable architecture.",
-    type: "website",
-    locale: "en_IN",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 type SectionKey =
   | "problem"
@@ -459,10 +426,10 @@ export default function ProjectPage() {
   ];
 
   const techStackText = [
-    ...project.stack.frontend,
-    ...project.stack.backend,
-    ...project.stack.other,
-  ].join(", ");
+  ...project.stack.frontend,
+  ...project.stack.backend,
+  ...project.stack.other,
+].join(", ");
 
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
@@ -486,7 +453,9 @@ export default function ProjectPage() {
 
         <img
           src={project.image}
-          alt={`${project.title} full-stack project case study built using ${techStackText}`}
+          alt={`${
+            project.title
+          } full-stack project case study built using ${techStackText}`}
           className="w-full rounded-3xl border border-border/50 shadow-2xl object-cover aspect-video"
         />
 
