@@ -68,7 +68,7 @@ export function Hero() {
 
           {/* Download Resume */}
           <MagneticButton
-            href="/resume/Sandeep_mehta_mern_developer_resume.pdf"
+            href="/resume/Sandeep_Mehta_Software_Engineer_Resume.pdf"
             download
             variant="secondary"
             className="w-full sm:w-auto"
