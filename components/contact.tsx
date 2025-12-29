@@ -17,6 +17,8 @@ import {
   CheckCircle2,
   Phone,
 } from "lucide-react";
+import { CIcon } from "@coreui/icons-react";
+import { cibLeetcode } from "@coreui/icons";
 import { toast } from "sonner";
 
 const contactMethods = [
@@ -64,6 +66,21 @@ const socialLinks = [
     label: "Twitter",
     href: "https://x.com/Shivskm2023",
     username: "@Shivskm2023",
+  },
+  {
+    icon: (props: any) => (
+      <CIcon
+        icon={cibLeetcode}
+        width={24}
+        height={24}
+        style={{ fill: "currentColor" }}
+        className="text-muted-foreground group-hover:text-primary transition-colors"
+        {...props}
+      />
+    ),
+    label: "Leetcode",
+    href: "https://leetcode.com/u/Sandeep_iit/",
+    username: "Sandeep_iit",
   },
 ];
 
