@@ -41,7 +41,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Identity line */}
-        <p className="text-sm md:text-base text-muted-foreground mb-6 tracking-wide">
+        <p className="text-sm md:text-base text-muted-foreground mb-6 tracking-wide hidden md:block">
           BS CSDA @ IIT Patna • Full-Stack Developer • Building Production-Ready
           Web Products
         </p>
