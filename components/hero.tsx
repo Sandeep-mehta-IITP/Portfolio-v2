@@ -47,7 +47,7 @@ export function Hero() {
         </p>
 
         {/* Main headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-balance">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 z-10 text-balance">
           I build scalable, high-impact web products{" "}
           <span className="gradient-text">that solve real problems</span>
         </h1>

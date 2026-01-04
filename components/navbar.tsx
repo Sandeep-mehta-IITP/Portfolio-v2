@@ -106,7 +106,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border/50 pt-4">
+          <div className="md:hidden mt-4 pb-4 z-50 border-t border-border/50 pt-4">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
